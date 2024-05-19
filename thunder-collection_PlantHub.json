@@ -1,0 +1,62 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "PlantHub",
+    "collectionId": "67ded32e-666c-41c0-8da1-df0f76c447b9",
+    "dateExported": "2024-05-13T20:49:02.711Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7e93ec70-9d60-48ff-87e6-0eb4705133ed",
+            "colId": "67ded32e-666c-41c0-8da1-df0f76c447b9",
+            "containerId": "",
+            "name": "register",
+            "url": "http://localhost:3001/api/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-05-13T20:07:34.976Z",
+            "modified": "2024-05-13T20:09:19.639Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"areena\", \n  \"email\":\"areena@gmail.com\",\n  \"password\":\"123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "54c80ab7-5ebf-4948-8e32-d708623b217c",
+            "colId": "67ded32e-666c-41c0-8da1-df0f76c447b9",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3001/api/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-05-13T20:17:02.948Z",
+            "modified": "2024-05-13T20:18:25.361Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"areena@gmail.com\", \n  \"password\":\"123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "67f666ee-cfd7-4318-a27a-bbd3bc4d1a79",
+            "colId": "67ded32e-666c-41c0-8da1-df0f76c447b9",
+            "containerId": "",
+            "name": "userProfile",
+            "url": "http://localhost:3001/api/user",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-05-13T20:44:32.380Z",
+            "modified": "2024-05-13T20:45:29.213Z",
+            "headers": [
+                {
+                    "name": "Auth",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjQyNzI1MzlmOWZiMmUxYzRmYWFjMTAiLCJpYXQiOjE3MTU2MzE5MTcsImV4cCI6MTcxNTcxODMxN30.uggTun2A2xe1Q_h-9914Q-PKaBi1e58-l-cCbuYi4vA"
+                }
+            ]
+        }
+    ],
+    "ref": "QFtivCQjZXeSl23VuDOOtvWaQq8qdW0_ZpnxsSSFKpsAiYDGxcrVAwguEX40fbRSze1gYLLCb3k6-Bosyh1dqw"
+}
