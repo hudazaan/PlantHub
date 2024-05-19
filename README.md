@@ -3,7 +3,8 @@ A Responsive Plant Selling E-commerce Website developed using:
 2. Backend: Nodejs with Express.
 3. Payment Gateway: Stripe API Integration. 
 4. API Testing: Thunder Client (register, login, and profile authentication testing).  
-5. Database: Mongodb (user registeration, login and profile authentication purpose). 
+5. Database: Mongodb (user registeration, login and profile authentication purpose).
+6. Authentication: JWT(JSON Web Token)
 
 
 ![1](https://github.com/hudazaan/PlantHub/assets/142089866/2b21a367-4205-42c8-ac9a-86e3e526951b)
