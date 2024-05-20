@@ -1,5 +1,5 @@
 A Responsive Plant Selling E-commerce Website developed using: 
-1. Frontend: HTML, CSS, and Vanilla Js. 
+1. Frontend: HTML5, CSS3, and Vanilla Js. 
 2. Backend: Nodejs with Express.
 3. Payment Gateway: Stripe API Integration. 
 4. API Testing: Thunder Client (register, login, and profile authentication testing).  
