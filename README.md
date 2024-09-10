@@ -17,7 +17,4 @@ A Responsive Plant Selling E-commerce Website developed using:
 
 
 
-{env:
-STRIPE_SECRET_KEY=sk_test_51P6fQ4SBsldQL3fTAkofxKXQqNyc24aPp4WGvi9LWe0ZYfguxV4ktWDHubt3ma0NOrG3r04ZyJFu0lRcYwZ6V8q200GBB2kNen
-DOMAIN=http://localhost:3001 
-}
+
