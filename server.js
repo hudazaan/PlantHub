@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use('/api',userRouter)
 
 mongoose.connect(
-    "mongodb+srv://naazhuda2000:hudanaazAISHA@cluster0.9szxh0x.mongodb.net/",{
+    process.env.MONGO_URI,{
         dbName: "Ecommerce_Plant",  
     }
 ).then(()=>console.log("MongoDB is Connected!!")).catch(
