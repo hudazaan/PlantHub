@@ -14,11 +14,12 @@ A Responsive Plant Selling E-commerce Website developed using:
 ![ss4](website/assets/css/images/sample/ss4.png)
 ![ss5](website/assets/css/images/sample/ss5.png)
 
+## Documentation
+For detailed insights, research methodology, and project analysis, you can view the full dissertation here: [Dissertation PDF](https://drive.google.com/file/d/13A5H2fbPJBJ0irZgQBLXIOsk66yAYcSD/view?usp=drivesdk&usp=embed_facebook&usp=embed_facebook)
 
 ## Setup Instructions
 Follow these steps to set up:  
 ```bash 
-
 Refer to the APIs mentioned in the thunderclient.txt file.
 
 
