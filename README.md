@@ -20,7 +20,7 @@ For detailed insights, research methodology, and project analysis, you can view 
 ## Setup Instructions
 Follow these steps to set up:  
 ```bash 
-Refer to the APIs mentioned in the thunderclient.txt file.
-
+npm install 
+npm run dev 
 
 
