@@ -7,9 +7,10 @@
 
 ## 🌱 About
 
-PlantHub is a simple e-commerce platform for plant diversity where users can browse plants, add to cart, and checkout using Stripe payments. It demonstrates core full-stack concepts—user auth, payment gateway integration, database persistence, and responsive UI—in a project scope that's manageable for learners while leaving plenty of room for polish and expansion.
+PlantHub is a simple e-commerce platform for plant diversity where users can browse plants, add to cart, and checkout using Stripe payments. It demonstrates core full-stack concepts: user auth, payment gateway integration, database persistence, and responsive UI, in a project scope that's manageable for learners while leaving plenty of room for polish and expansion.
 
-**Current Status:** MVP with static product pages and manual layout. **Stage:** Early phase, seeking contributors to help move toward a dynamic catalog system.
+**Current Status:** MVP with static product pages and manual layout. 
+**Stage:** Early phase, seeking contributors to help move toward a dynamic catalog system.
 
 ## 🛠️ Tech Stack
 
