@@ -1,13 +1,13 @@
 # PlantHub
 
-> A responsive plant e-commerce website built as an undergraduate project. **Perfect for newcomers learning full-stack development** and **experienced developers sharpening real-world skills** through open-source contributions.
+> A responsive plant-selling e-commerce website. **Perfect for newcomers learning full-stack development** and **experienced developers sharpening real-world skills** through open-source contributions.
 
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen)]()
 [![License](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
 ## 🌱 About
 
-PlantHub is a simple but real e-commerce platform where users can browse plants, add to cart, and checkout using Stripe payments. It demonstrates core full-stack concepts—user auth, payment gateway integration, database persistence, and responsive UI—in a project scope that's manageable for learners while leaving plenty of room for polish and expansion.
+PlantHub is a simple e-commerce platform for plant diversity where users can browse plants, add to cart, and checkout using Stripe payments. It demonstrates core full-stack concepts—user auth, payment gateway integration, database persistence, and responsive UI—in a project scope that's manageable for learners while leaving plenty of room for polish and expansion.
 
 **Current Status:** MVP with static product pages and manual layout. **Stage:** Early phase, seeking contributors to help move toward a dynamic catalog system.
 
