@@ -95,19 +95,19 @@ Pick an issue from the list below or [open your own discussion](../../discussion
 
 These are **great first issues** with clear scope and guidance:
 
-1. **[📋 Create .env.example + Setup Validator](#)**  
+1. **📋 [Create .env.example + Setup Validator](#)**  
    Add an `.env.example` template and a quick startup check script.  
 
-2. **[📖 Write First-Run Setup Guide](#)**  
+2. **📖 [Write First-Run Setup Guide](#)**  
    Document step-by-step local setup with screenshots/expected outputs.  
 
-3. **[🎨 Fix Responsive Layout Bugs](#)**  
+3. **🎨 [Fix Responsive Layout Bugs](#)**  
    Mobile/tablet breakpoints for nav, cart, forms. No design decisions needed.  
 
-4. **[♿ Add Basic Accessibility (A11y)](#)**  
+4. **♿ [Add Basic Accessibility (A11y)](#)**  
    Semantic labels, keyboard navigation, alt text on product images.  
 
-5. **[✅ Cart + Checkout UX Hardening](#)**  
+5. **✅ [Cart + Checkout UX Hardening](#)**  
    Add loading states, error messages, empty-cart guard.   
 
 
@@ -115,16 +115,16 @@ These are **great first issues** with clear scope and guidance:
 
 ### �🛣️ Featured Issues (Mid-Level)
 
-1. **[✨ Show Logged-In User in Header](#)**  
+1. **✨ [Show Logged-In User in Header](#)**  
    Display user name/avatar on nav after login; improve logout flow. 
 
-2. **[🎭 Add Open Source Community Files](#)**  
+2. **🎭 [Add Open Source Community Files](#)**  
     Contributing guide, issue templates, PR template, code of conduct.
 
-3. **[♻️ Refactor Repeated Layout Components](#)**  
+3. **♻️ [Refactor Repeated Layout Components](#)**  
     DRY up header/footer duplication across pages.
 
-4. **[🎛️ Admin Dashboard Scaffold](#)**  
+4. **🎛️ [Admin Dashboard Scaffold](#)**  
     Foundation for admin plant/product management (CRUD placeholders).
 
     
