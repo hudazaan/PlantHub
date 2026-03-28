@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }) 
         .then((res) => res.json()) 
         .then((url) => {
-            location.href = url; 
             clearCart();
+            location.href = url; 
         }) 
         .catch((err) => console.log(err)); 
     }); 

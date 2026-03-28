@@ -2,9 +2,9 @@
 import express from 'express';
 import { config } from 'dotenv';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { dirname, join } from 'path';
 import stripePackage from 'stripe'; 
-// import * as fs from 'fs'; 
+import { readFile, writeFile } from 'fs/promises';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose'; 
 import userRouter from './routes/user.js'
@@ -14,6 +14,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 config();
 
+const PORT = Number(process.env.PORT) || 3000;
 const stripe = stripePackage(process.env.STRIPE_SECRET_KEY);
 
 //server start
@@ -49,26 +50,46 @@ app.get("/rejected", (req, res) => {
 
 
 app.get("/login", (req, res) => {
-    res.sendFile("rejected.html", { root: "website" });
+    res.sendFile("login.html", { root: "website" });
 });
 app.get("/register", (req, res) => {
-    res.sendFile("rejected.html", { root: "website" });
+    res.sendFile("register.html", { root: "website" });
 });
+
+
+async function saveFormMessage(data) {
+    const filePath = join(__dirname, 'formData.json');
+    let records = [];
+
+    try {
+        const file = await readFile(filePath, 'utf8');
+        records = file.trim() ? JSON.parse(file) : [];
+    } catch (error) {
+        records = [];
+    }
+
+    records.push(data);
+    await writeFile(filePath, JSON.stringify(records, null, 2), 'utf8');
+}
 
 
 
 //route to handle form submission
-app.post("/send-message", (req, res) => {
-    const formData = [];
+app.post("/send-message", async (req, res) => {
     const { name, email, subject, message } = req.body;
 
-    // console.log('Form Data:', req.body);    
-    formData.push({ name, email, subject, message })
-    res.send("Message received successfully!"); 
+    try {
+        await saveFormMessage({ name, email, subject, message, createdAt: new Date().toISOString() });
+        res.send("Message received successfully!");
+    } catch (error) {
+        console.error('Error saving form data:', error);
+        res.status(500).send('Unable to save message');
+    }
 });
 
 
 app.post("/stripe-checkout", async (req, res) => {
+    const baseUrl = `${req.protocol}://${req.get('host')}`;
     const lineItems = req.body.items.map((item) => {
         const unitAmount = parseInt(item.price.replace(/[^0-9.-]+/g, "") * 100);
         console.log("item-price:", item.price); 
@@ -92,8 +113,8 @@ try {
 const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"], 
     mode: "payment", 
-    success_url: `${process.env.DOMAIN}/successful`, 
-    cancel_url: `${process.env.DOMAIN}/rejected`, 
+    success_url: `${baseUrl}/successful`, 
+    cancel_url: `${baseUrl}/rejected`, 
     line_items: lineItems, 
 
     billing_address_collection: "required", 
@@ -106,8 +127,8 @@ const session = await stripe.checkout.sessions.create({
 });
 
 //check port for server
-app.listen(3001, () => {
-    console.log("Listening on Port 3001;");
+app.listen(PORT, () => {
+    console.log(`Listening on Port ${PORT};`);
 });
 
  

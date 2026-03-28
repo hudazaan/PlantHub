@@ -3,21 +3,17 @@ let ctIcon = document.querySelector('#c-icon');
 let ct = document.querySelector('.ct');
 let closeIcon = document.querySelector('#close-ct');
 
-ctIcon.addEventListener('click', function() {
-    ct.classList.add('active');
-});
-closeIcon.addEventListener('click', function() {
-
-    ct.classList.remove('active');
-});
-
-
-//toggle cart 
-function toggleCt() {
-    ct.classList.toggle('actve'); 
+if (ctIcon && ct) {
+    ctIcon.addEventListener('click', function() {
+        ct.classList.add('active');
+    });
 }
-ctIcon.addEventListener('click', toggleCt);
-closeIcon.addEventListener('click', toggleCt); 
+
+if (closeIcon && ct) {
+    closeIcon.addEventListener('click', function() {
+        ct.classList.remove('active');
+    });
+}
 
 
 //Cart Actions: 

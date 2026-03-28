@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Check commit sign-offs
+        run: |
+          for commit in $(git rev-list origin/main..HEAD); do
+            if ! git log -1 --format=%B $commit | grep -q "Signed-off-by:"; then
+              echo "Commit $commit is not signed off"
+              exit 1
+            fi
+          done
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm test

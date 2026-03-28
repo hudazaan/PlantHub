@@ -21,17 +21,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     //Sliding Login 
-    let loginBtn = document.querySelector('#login-btn');
-    let loginForm = document.querySelector('.login-form');
-    let closeForm = document.querySelector('#close-fm');
-    
-    loginBtn.addEventListener('click', function() {
-        loginForm.classList.add('active');
-    });
-    closeForm .addEventListener('click', function() {
-    
-        loginForm.classList.remove('active');
-    });
+        let loginBtn = document.querySelector('#login-btn');
+        let loginForm = document.querySelector('.login-form');
+        let closeForm = document.querySelector('#close-fm');
+
+        if (loginBtn && loginForm) {
+            loginBtn.addEventListener('click', function() {
+                loginForm.classList.add('active');
+            });
+        }
+
+        if (closeForm && loginForm) {
+            closeForm.addEventListener('click', function() {
+                loginForm.classList.remove('active');
+            });
+        }
     
     
     
@@ -42,15 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateLoginButton() {
         const token = localStorage.getItem('token');
         const loginButton = document.getElementById('login-btn');
+
+        if (!loginButton) {
+            return;
+        }
     
         if (token) {
             loginButton.innerHTML = 'Logout';
-            loginButton.href = ''; // Update href attribute for logout
             loginButton.removeEventListener('click', handleLogin);
             loginButton.addEventListener('click', handleLogout);
         } else {
-            loginButton.innerHTML = '<i class="ri-user-fill">';
-            loginButton.href = 'login.html'; 
+            loginButton.innerHTML = '<i class="ri-user-fill"></i>';
             loginButton.removeEventListener('click', handleLogout);
             loginButton.addEventListener('click', handleLogin);
         }

@@ -2,11 +2,13 @@ import { User } from "../Models/User.js";
 import jwt from 'jsonwebtoken' 
 
 export const Authenticate = async (req,res,next) => {
-    const token = req.header("Auth") 
-    try {
-        if(!token) return res.json({message:"login first"})
+    const token = req.header("Auth")
+    const jwtSecret = process.env.JWT_SECRET || 'dev_jwt_secret_change_me';
 
-        const decode = jwt.verify(token, "!@#$%^&*()"); 
+    try {
+        if(!token) return res.status(401).json({message:"login first"})
+
+        const decode = jwt.verify(token, jwtSecret); 
 
         // console.log("This is decoded data",decode) 
 
@@ -14,13 +16,13 @@ export const Authenticate = async (req,res,next) => {
 
         let user = await User.findById(id)
 
-        if(!user) return res.json({message:"User not exist"})
+        if(!user) return res.status(404).json({message:"User not exist"})
 
         req.user = user
 
         next();
 
     } catch (error) {
-         res.json({message:error}) 
+         res.status(401).json({message:'Unauthorized'}) 
     }
 } 

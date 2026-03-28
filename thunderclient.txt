@@ -12,7 +12,7 @@
   - **Request Body**:
     ```json
     {
-      "username": "peter_park",
+      "email": "peter@example.com",
       "password": "your_password"
     }
     ```  
